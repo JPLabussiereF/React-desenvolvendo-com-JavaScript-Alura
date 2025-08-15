@@ -1,12 +1,17 @@
 import './CampoTexto.css'
 
-const CampoTexto = () => {
+const CampoTexto = (props) => {
+
+    const placeholderModified = `${props.placeholder}...`
+
     return (
         <div className="campo-texto">
-            <label>Nome</label>
-            <input placeholder='Digite o seu nome' />
+            <label>
+                {props.label}
+            </label>
+            <input placeholder={placeholderModified} />
         </div>
     )
-} 
+}
 // Pesquisar sobre arrow function e escopo lexico 
 export default CampoTexto
